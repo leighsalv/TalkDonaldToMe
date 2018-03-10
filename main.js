@@ -73,7 +73,6 @@ app.post('/webhook/', function(req, res) {
     let event = messaging_events[i]
     let sender = event.sender.id
 
-    }
     if (event.message && event.message.text) {
       let text = event.message.text
       text = text.toUpperCase();
@@ -89,6 +88,7 @@ app.post('/webhook/', function(req, res) {
     }
   }
   res.sendStatus(200)
+  }
 })
 
 function sendText(sender, text) {
