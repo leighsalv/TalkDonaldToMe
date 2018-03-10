@@ -82,7 +82,7 @@ app.post('/webhook/', function(req, res) {
         donaldSays = hillaryClinton[Math.floor(Math.random() * hillaryClinton.length)];
         sendText(sender, donaldSays);
       }
-
+      else{
       //sendText(sender, "Text echo: " + text.substring(0, 100))
       donaldSays = sayings[Math.floor(Math.random() * sayings.length)];
       sendText(sender, donaldSays);
