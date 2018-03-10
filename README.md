@@ -1,8 +1,13 @@
 # Talk Donald To Me
 
-A Facebook Messenger chat bot that quotes Donald Trump when in a conversation with a user. Language: **Javascript**
+A Facebook Messenger chat bot that quotes Donald Trump when in a conversation with a user.
+
+Language: **Javascript**
+
 Framework: **Express**
+
 Server: **Node.js**
+
 Deployed in: **Heroku**
 
 ## Node.js & Express Setup
@@ -20,8 +25,11 @@ Create a new app in [`Heroku`](https://id.heroku.com/login)
 **In terminal...**
 
 `heroku login` to log in to your Heroku account.
+
 `git init` initialize a local repository for Heroku.
-`git remote add heroku git@heroku.com:{heroku-app-name}.git` where {heroku-app-name} is the name of the app you created (remove curly braces).
+
+`git remote add heroku git@heroku.com:{heroku-app-name}.git` where {heroku-app-name} is the
+name of the app you created (remove curly braces).
 
 ## Credits
 Logo: created in PixelArtMaker.com
