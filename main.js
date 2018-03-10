@@ -42,6 +42,21 @@ var sayings = ["Bing bing, bong bong, bing bing bing",
   ""
 ];
 
+var hillaryClinton = ["Do you know that Hillary Clinton was a birther? She wanted those records and fought like hell. People forgot. Did you know John McCain was a birther?",
+"Even a race to Obama, she was gonna beat Obama. I don't know who would be worse, I don’t know, how could it be worse? But she was going to beat—she was favored to win—and she got schlonged.",
+"I think the only card she has is the woman’s card. She’s got nothing else going.",
+"Most corrupt candidate ever!",
+"Many people are saying that the Iranians killed the scientist who helped the U.S. because of Hillary Clinton’s hacked emails.",
+"Hillary wants to abolish, essentially abolish, the Second Amendment. By the way, and if she gets to pick her judges, nothing you can do, folks. Although the Second Amendment people—maybe there is, I don’t know. But I’ll tell you what, that will be a horrible day.",
+"He [Obama] is the founder of ISIS. He’s the founder of ISIS, OK? He’s the founder. He founded ISIS and I would say the co-founder would be crooked Hillary Clinton.",
+"Hillary Clinton is a bigot who sees people of color only as votes, not as human beings worthy of a better future.",
+"She could walk into this arena right now and shoot somebody with 20,000 people watching, right smack in the middle of the heart and she wouldn’t be prosecuted, OK?",
+"She goes around with armed bodyguards like you have never seen before. I think that her bodyguards should drop all weapons. They should disarm. Right? Right? I think they should disarm immediately.",
+"Do people notice Hillary is copying my airplane rallies—she puts the plane behind her like I have been doing from the beginning.",
+"Hillary Clinton is taking the day off again, she needs the rest. Sleep well Hillary—see you at the debate!",
+"Hillary is so corrupt, she got kicked off the Watergate Commission. How corrupt do you have to be to get kicked off the Watergate commission? Pretty corrupt."
+];
+
 var donaldSays = "";
 
 app.get('/webhook/', function(req, res) {
@@ -58,8 +73,16 @@ app.post('/webhook/', function(req, res) {
     let event = messaging_events[i]
     let sender = event.sender.id
 
+    }
     if (event.message && event.message.text) {
       let text = event.message.text
+      text = text.toUpperCase();
+
+      if(text.includes("HILLARY") || text.includes("CLINTON")) {
+        donaldSays = hillaryClinton[Math.floor(Math.random() * hillaryClinton.length)];
+        sendText(sender, donaldSays);
+      }
+
       //sendText(sender, "Text echo: " + text.substring(0, 100))
       donaldSays = sayings[Math.floor(Math.random() * sayings.length)];
       sendText(sender, donaldSays);
