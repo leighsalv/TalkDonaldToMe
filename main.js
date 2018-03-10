@@ -77,7 +77,12 @@ app.post('/webhook/', function(req, res) {
       let text = event.message.text
       text = text.toUpperCase();
 
-      if(text.includes("HILLARY") || text.includes("CLINTON")) {
+      if(text.includes("HELLO") || text.includes("HI") || text.includes("SUP")) {
+        donaldSays = "Hey. Let's talk. Tell me anything.";
+        sendText(sender, donaldSays);
+      }
+
+      else if(text.includes("HILLARY") || text.includes("CLINTON")) {
         donaldSays = hillaryClinton[Math.floor(Math.random() * hillaryClinton.length)];
         sendText(sender, donaldSays);
       }
