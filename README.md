@@ -1,9 +1,9 @@
 # Talk Donald To Me
 
-A Facebook Messenger chat bot that quotes Donald Trump when in a conversation with a user.\n Language: **Javascript**\n
-Framework: **Express**\n
-Server: **Node.js**\n
-Deployed in: **Heroku**\n
+A Facebook Messenger chat bot that quotes Donald Trump when in a conversation with a user.\n Language: **Javascript**
+Framework: **Express**
+Server: **Node.js**
+Deployed in: **Heroku**
 
 ## Node.js & Express Setup
 **Install**
