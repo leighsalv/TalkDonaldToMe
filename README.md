@@ -10,18 +10,18 @@ Deployed in: **Heroku**
 
 [`Node.js`](https://nodejs.org/en/) and follow the prompts.
 
-[`npm init`] in terminal to create package.json.
+`npm init` in terminal to create package.json.
 
-[`npm install express request body-parser --save`] in terminal to install dependencies.
+`npm install express request body-parser --save` in terminal to install dependencies.
 
 ## Heroku Setup
 Create a new app in [`Heroku`](https://id.heroku.com/login)
 
 **In terminal...**
 
-[`heroku login`] to log in to your Heroku account.
-[`git init`] initialize a local repository for Heroku.
-[`git remote add heroku git@heroku.com:{heroku-app-name}.git`] where {heroku-app-name} is the name of the app you created (remove curly braces).
+`heroku login` to log in to your Heroku account.
+`git init` initialize a local repository for Heroku.
+`git remote add heroku git@heroku.com:{heroku-app-name}.git` where {heroku-app-name} is the name of the app you created (remove curly braces).
 
 ## Credits
 Logo: created in PixelArtMaker.com
